@@ -5,8 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+  display:flex;
+  justify-content: none;
+  flex-direction: column;
+ 
+}
+h1{
+  color:white;
+  opacity:none;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 0 #000;
+
 }
 
+.explanation {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

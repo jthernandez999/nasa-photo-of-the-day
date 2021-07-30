@@ -5,6 +5,13 @@ import { BASE_URL, API_KEY } from './constants/index'
 import Title from './Title'
 import NavBar from "./NavBar";
 import Details from './Details'
+import styled from 'styled-components'
+
+
+const StyledH1 = styled.h1`
+color:white;
+`
+
 
 function App() {
   const [nasaData, setNasaData] = useState([])
@@ -15,7 +22,7 @@ function App() {
     .then(res => {
       console.log(res.data)
       setNasaData(res.data)
-      console.log(res.data.title)
+      
     })
     .catch(err => console.log(err))
 
@@ -24,10 +31,13 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Title title={nasaData.title} />
+  
+      <Title title={nasaData.title}/>
       <Details  url={nasaData.url} title={nasaData.title} media_type={nasaData.media_type} copyright={nasaData.copyright} explanation={nasaData.explanation} />
     </div>
   );
 }
 
 export default App;
+
+
